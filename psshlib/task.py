@@ -56,14 +56,17 @@ class Task(object):
 
         # Set options.
         self.verbose = opts.verbose
+
         try:
             self.print_out = bool(opts.print_out)
         except AttributeError:
             self.print_out = False
+
         try:
             self.inline = bool(opts.inline)
         except AttributeError:
             self.inline = False
+
         try:
             self.inline_stdout = bool(opts.inline_stdout)
         except AttributeError:
@@ -283,6 +286,8 @@ class Task(object):
             sys.stdout.flush()
             try:
                 sys.stdout.buffer.write(self.errorbuffer)
+                sys.stdout.flush()
             except AttributeError:
                 sys.stdout.write(self.errorbuffer)
 
+        print("")

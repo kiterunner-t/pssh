@@ -53,6 +53,8 @@ def common_parser():
     parser.add_option('-X', '--extra-arg', dest='extra', action='append',
             metavar='ARG', help='Extra command-line argument')
 
+    parser.add_option('--interactive', dest='interactive', action='store_true',
+              default=False, help='interactive mode')
     return parser
 
 
