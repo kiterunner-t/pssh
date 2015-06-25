@@ -2,7 +2,6 @@
 # Copyright (c) 2003-2008, Brent N. Chun
 
 import fcntl
-import string
 import sys
 
 HOST_FORMAT = 'Host format is [user@]host[:port] [user]'

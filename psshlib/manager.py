@@ -36,6 +36,7 @@ class Manager(object):
     def __init__(self, opts):
         self.limit = opts.par
         self.timeout = opts.timeout
+
         self.askpass = opts.askpass
         self.outdir = opts.outdir
         self.errdir = opts.errdir
@@ -47,6 +48,12 @@ class Manager(object):
         self.done = []
 
         self.askpass_socket = None
+
+
+    def update_opts(self, opts):
+        self.limit = opts.par
+        self.timeout = opts.timeout
+
 
     def run(self):
         """Processes tasks previously added with add_task."""
